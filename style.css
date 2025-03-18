@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+:root {
+  --theme-color: #006170;
+  --primary-color: #19352D;
+  --text-color: #7E7E7E;
+  --black-color: #000000;
+  --white-color: #fff;
+}
+
+/*
+===============================
+Global CSS START
+===============================
+*/
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--black);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  font-family: "Inter", sans-serif;
+  /* font-family: "Caveat", cursive;
+  font-family: "DM Sans", sans-serif; */
+}
+html,
+body {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+img, svg {
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+  transition: 0.3s all ease;
+}
+a,
+.button {
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+a:focus,
+.button:focus {
+  text-decoration: none;
+  outline: none;
+}
+a:focus,
+a:hover,
+.portfolio-cat a:hover,
+.footer -menu li a:hover {
+  color: var(--text-white);
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  line-height: 1.2;
+}
+h1,
+h2 {
+  font-weight: 700;
+}
+h4,
+h5 {
+  font-weight: 600;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: inherit;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+	text-decoration: none;
+}
+p:last-of-type {
+	margin: 0;
+}
+/*
+==========================
+Main Btn Css Start
+==========================
+*/
+.site-btn {
+  font-size: 15px;
+  font-weight: 400;
+  padding: 10px 30px;
+  display: inline-block;
+  transition: 0.3s all ease;
+  border-radius: 30px;
+  color: var(--white-color);
+  background-color: #006170;
+}
+.site-btn:hover {
+  color: var(--white-color);
+  background-color: var(--theme-color);
+}
+/*
+=========================
+Main Btn Css End 
+=========================
+*/
+#page {
+  overflow: hidden;
+}
+@media screen and (min-width: 1400px) {
+  .container {
+     max-width: 1350px;
+  }
+  .container-large {
+     max-width: 1400px;
+  }
+  }
+  .p-relative {
+	position: relative;
+  }
+/*
+============================
+Global CSS END
+============================
+*/
+
+/*
+============================
+Header Css Start
+============================
+*/
+.header-main {
+	padding: 23px 0;
+}
+.header-inline-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+/* Nav Menu */
+.site-header .main-menu {
+	text-align: right;
+}
+.site-header .menu {
+	display: flex;
+	column-gap: 40px;
+} 
+.site-header .menu > .menu-item{
+	display: inline-block;
+	position: relative;
+}
+.site-header .menu > .menu-item > a {
+	color: #E5E5E5;
+	font-weight: 300;
+	font-size: 16px;
+	display: block;
+	text-decoration: none;
+	font-family: "Montserrat", sans-serif;
+	transition: 0.3s all ease;
+}
+.site-header .menu > .menu-item > .sub-menu > .menu-item > a:hover,
+.site-header .menu > .menu-item:hover > a{
+	color: var(--primary-color);
+}
+.site-header .open-nav-menu {
+	height: 34px;
+	width: 100%;
+	margin-right: 15px;
+	display: none;
+	align-items: center;
+	justify-content: flex-end;
+	cursor: pointer;
+}
+.site-header .open-nav-menu span{
+	display: block;
+	height: 2px;
+	width: 24px;
+	background-color: var(--white-color);
+    position: relative;
+}
+.site-header .open-nav-menu span:before,
+.site-header .open-nav-menu span:after{
+	content: '';
+	position: absolute;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--white-color);
+	box-sizing: border-box;
+}
+.site-header .open-nav-menu span:before{
+	top:-7px;
+}
+.site-header .open-nav-menu span:after{
+	top:7px;
+}
+.site-header .close-nav-menu{
+	height: 40px;
+	width: 40px;
+	background-color: #ffffff;
+	margin:0 0 15px 15px;
+	cursor: pointer;
+	display: none;
+	align-items: center;
+	justify-content: center;
+}
+.site-header .close-nav-menu img{
+	width: 16px;
+}
+.site-header .menu-overlay{
+	position: fixed;
+	z-index: 999;
+	background-color: rgba(0,0,0,0.5);
+	left:0;
+	top:0;
+	height: 100%;
+	width: 100%;
+	visibility: hidden;
+	opacity:0;
+	transition: all 0.3s ease;
+}
+
+/* Navber Responsive Start */
+@media only screen and (max-width:1400px) {
+  .header-right-wrapper {
+    column-gap: 30px;
+  }
+}
+@media only screen and (max-width:1199px) {
+  .site-header .menu {
+    column-gap: 25px;
+  }
+}
+@media only screen and (max-width: 991px){
+  .site-header .open-nav-menu {
+    width: auto;
+  }
+	.site-header .menu-overlay.active{
+   	visibility: visible;
+	  opacity: 1;
+  }
+	.site-header .main-menu{
+		position: fixed;
+		right: -280px;
+		visibility: hidden;
+		width: 280px;
+		height: 100%;
+		top:0;
+		overflow-y: auto;
+		background-color: var(--primary-color);
+		z-index: 1000;
+		padding: 15px 0;
+		transition: all 0.5s ease;
+	}
+	.site-header .main-menu.open{
+		visibility: visible;
+		right: 0px;
+	}
+  .site-header .menu {
+    flex-direction: column;
+	text-align: left;
+  }
+	.site-header .menu > .menu-item{
+		display: block;
+		margin:0;
+	}
+	.site-header .menu > .menu-item > a{
+		color: #ffffff;
+		padding: 12px 15px;
+		border-bottom: 1px solid #333333;
+	}
+	.site-header .menu > .menu-item:first-child > a{
+	    border-top: 1px solid #333333;	
+	}
+	.site-header .close-nav-menu, .site-header .open-nav-menu {
+		display: flex;
+		padding: 10px;
+		border-radius: 4px;
+		background-color: #006170;
+	}
+}
+/* Navber Responsive End */
+.site-header {
+	padding: 20px 0;
+	border-bottom: 1px solid #FFFFFF66;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	top: 0;
+	z-index: 99;
+}
+@media only screen and (max-width:767px) {
+	.site-header {
+		border-bottom: 0;
+	}
+}
+/*
+============================
+Header Css End
+============================
+*/
+.hero-section {
+	height: 893px;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	position: relative;
+	z-index: 2;
+  }
+  .hero-section:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(181.93deg, rgba(0, 0, 0, 0.7) 1.63%, rgba(0, 0, 0, 0) 122.23%);
+	z-index: -1;
+  }
+.hero-items {
+	display: flex;
+	justify-content: space-between;
+  }
+  .hero-contants {
+	max-width: 672px;
+	/* float: right; */
+}
+  .hero-contants h2 {
+	background-color: var(--white-color);
+	padding: 24px;
+	border-radius: 20px;
+	font-size: 35px;
+	line-height: 51px;
+  }
+  .hero-contants h2 span {
+	font-size: 28px;
+	display: block;
+  }
+  .hero-contants p {
+	margin-top: 24px;
+	font-size: 20px;
+	color: var(--white-color);
+	line-height: 32px;
+	font-weight: 400;
+}
+  .hero-contants p span {
+	font-size: 24px;
+	font-weight: 700;
+  }
+  .hero-btn {
+	top: 60px;
+	position: relative;
+	border: 1px solid #FFFFFF;
+	border-radius: 50px;
+	padding: 15px;
+	font-size: 18px;
+	color: var(--white-color);
+	transition: 0.3s all ease;
+  }
+  .hero-btn i {
+	padding-left: 20px;
+  }
+  .hero-btn:hover {
+	color: var(--black-color);
+	background-color: var(--white-color);
+  }
+  @media only screen and (max-width:991px) {
+	.hero-section {
+		height: 750px;
+	}
+	.hero-contants {
+		max-width: 472px;
+	}
+	.hero-contants h2 {
+		font-size: 30px !important;
+		line-height: 40px !important;
+	}
+	.hero-contants h2 span {
+		font-size: 18px !important;
+		line-height: 30px !important;
+	}
+	.hero-contants p span {
+		font-size: 20px;
+		font-weight: 700;
+	}
+	.hero-contants p {
+		font-size: 17px;
+	}
+	.hero-btn {
+		font-size: 16px;
+	}
+}
+  @media only screen and (max-width:767px) {
+	.hero-section {
+		height: 610px;
+	}
+	.hero-items {
+		display: block;
+	}
+	.hero-arrow-top img {
+		width: 50px;
+	}
+	.hero-arrow-top {
+		text-align: right;
+	}
+	.hero-contants {
+		margin-top: 20px;
+	}
+	.hero-contants h2 {
+		font-size: 21px !important;
+		line-height: 30px !important;
+	}
+	.hero-contants h2 span {
+		font-size: 17px !important;
+		line-height: 28px !important;
+	}
+	.hero-contants p {
+		font-size: 14px;
+        line-height: 26px;
+	}
+	.hero-contants p span {
+		font-size: 14px;
+		font-weight: 700;
+	}
+	.hero-btn {
+		top: 45px;
+		font-size: 15px;
+	}
+}
+
+/*
+============================
+Footer Css Start
+============================
+*/
+
+
+
+/*
+============================
+Footer Css End
+============================
+*/
+
+
+
+
+
+
+
+/*
+============================
+Responsive Css Start
+============================
+*/
+ /* ----- Laptop device screen ----- */
+ @media only screen and (max-width:1199px) {
+ 
+ }
+ /* ----- Tablet device screen ----- */
+ @media only screen and (max-width:991px) {
+ 
+ }
+ /* ----- Mobile device screen ----- */
+ @media only screen and (max-width:767px) {
+ 
+ }
+ 
+ /*
+ ============================
+ Responsive Css End
+ ============================
+ */
