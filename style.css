@@ -167,10 +167,6 @@ Header Css Start
 	font-family: "Montserrat", sans-serif;
 	transition: 0.3s all ease;
 }
-.site-header .menu > .menu-item > .sub-menu > .menu-item > a:hover,
-.site-header .menu > .menu-item:hover > a{
-	color: var(--primary-color);
-}
 .site-header .open-nav-menu {
 	height: 34px;
 	width: 100%;
@@ -214,7 +210,7 @@ Header Css Start
 	justify-content: center;
 }
 .site-header .close-nav-menu img{
-	width: 16px;
+	width:24px;
 }
 .site-header .menu-overlay{
 	position: fixed;
@@ -256,7 +252,7 @@ Header Css Start
 		height: 100%;
 		top:0;
 		overflow-y: auto;
-		background-color: var(--primary-color);
+		background-color: #006170;
 		z-index: 1000;
 		padding: 15px 0;
 		transition: all 0.5s ease;
@@ -276,10 +272,7 @@ Header Css Start
 	.site-header .menu > .menu-item > a{
 		color: #ffffff;
 		padding: 12px 15px;
-		border-bottom: 1px solid #333333;
-	}
-	.site-header .menu > .menu-item:first-child > a{
-	    border-top: 1px solid #333333;	
+		
 	}
 	.site-header .close-nav-menu, .site-header .open-nav-menu {
 		display: flex;
@@ -333,7 +326,11 @@ Header Css End
   }
   .hero-contants {
 	max-width: 672px;
-	/* float: right; */
+}
+.hero-contants a:hover {
+	color: var(--white-color) !important;
+	background-color: var(--primary-color);
+	border-color: var(--primary-color);
 }
   .hero-contants h2 {
 	background-color: var(--white-color);
@@ -910,75 +907,6 @@ Header Css End
 		}
 	  }
 
-
-	  .client-content-wrapper {
-		display: flex;
-		column-gap: 24px;
-		margin-top: 85px;
-	}
-	.client-bg {
-		height: 470px;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-		border-radius: 30px;
-	}
-	 
-.client-item-btn .arrow-top {
-	background: transparent;
-	color: #29594B;
-	font-size: 15px;
-	transform: rotate(45deg);
-	width: 38px;
-	height: 38px;
-	border: 1px solid #29594B;
-  } 
-
-.client-bg {
-  padding: 40px;
-}
-.client-box-content {
-  display: flex;
-}
-
-
-.client-boxes-wrapper {
-	display: flex;
-	column-gap: 24px;
-  }
-  .client-box-content div:nth-child(1) {
-	width: 40%;
-  }
-  .client-box-content div:nth-child(2) {
-	width: 60%;
-  }  
-  .client-box-item.box-item-2 {
-	display: flex;
-}
-  .client-box-item.box-item-2 div:nth-child(2) {
-	background: red;
-	padding: 30px;
-	border-radius: 0 24px 24px 0;
-  }
-  .box-btn-wrap {
-	display: flex;
-	justify-content: space-between;
-  }
-  .box-btn-wrap a:nth-child(2) {
-	transform: rotate(45deg);
-	color: var(--primary-color);
-	width: 38px;
-	height: 38px;
-	border: 1px solid var(--primary-color);
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-  }
-  .box-btn-wrap {
-	margin-top: 45px;
-  }
-
   .latest-news-boxes {
 	margin-top: 75px;
 }
@@ -1326,7 +1254,7 @@ Footer Css Start
 	margin-bottom: 20px;
 }
 .footer-widget span {
-  font-weight: 400;
+	font-weight: 300;
 }
 .footer-socials {
   margin-top: 25px;
@@ -1339,7 +1267,7 @@ Footer Css Start
   display: block;
 }
 
-.footer-bootm-wrap {
+.footer-bottom-wrap {
 	display: flex;
 	justify-content: center;
 	padding: 22px 0;
@@ -1390,7 +1318,7 @@ Footer Css Start
 	.footer-bottom-link ul li a {
 		font-size: 15px;
 	}
-	.footer-bootm-wrap {
+	.footer-bottom-wrap {
 		display: block;
 	}
   }

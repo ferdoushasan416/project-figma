@@ -1,40 +1,6 @@
 (function ($) {
   "use strict";
   
-  $(window).on('scroll', function () {
-    var scroll = $(window).scrollTop();
-    if (scroll < 245) {
-      $(".header-sticky").removeClass("sticky");
-    } else {
-      $(".header-sticky").addClass("sticky");
-    }
-  });
-  
-   // Accordion Scripts
-      
-          $('.accordion-title').eq(0).addClass('active');
-          $('.accordion-content').eq(0).slideDown();
-  
-          $(".accordion-title").on('click', function (){
-              
-              var trigger = $(this);
-              var hasClass = trigger.hasClass('active');
-  
-              $('.accordion-title').removeClass('active');
-              $('.accordion-title').next().slideUp();
-              
-              if(hasClass) {
-                  trigger.removeClass('active');
-                  trigger.next().slideUp();
-              }
-  
-              else {
-                  trigger.addClass('active');
-                  trigger.next().slideToggle();          
-              }
-  
-          });
-  
   //Navber//
   (() =>{
    
@@ -104,33 +70,10 @@
   // Navbar End //
 
 
-
-
   
-    $(document).ready(function(){
-      $('.trackmaster-slides-active').slick({
-        arrows: false,
-        dots: true,
-        infinite: true,
-        speed: 500,
-        fade: true,
-        cssEase: 'linear'
-      });
-    });
+   
       
       
-  /* magnificPopup img view */
-  $('.popup-image').magnificPopup({
-    type: 'image',
-    gallery: {
-      enabled: true
-    }
-  });
-  
-  /* magnificPopup video view */
-  $('.popup-video').magnificPopup({
-    type: 'iframe'
-  });
   
   
   // WOW active
